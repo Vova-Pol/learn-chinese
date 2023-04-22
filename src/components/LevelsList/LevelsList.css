@@ -1,0 +1,17 @@
+.levels-list {
+  padding: 20px;
+}
+
+.levels-list__title {
+  margin: 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.levels-list__list {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

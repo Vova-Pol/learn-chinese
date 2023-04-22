@@ -1,0 +1,29 @@
+.levels-list__level-item {
+  border-radius: 40px;
+  width: 28%;
+  min-height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #313e5c;
+  font-size: 19px;
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+
+.levels-list__level-item:hover {
+  filter: contrast(1.2);
+  transform: scale(1.05);
+}
+
+.levels-list__level-item_color_light-green {
+  background-color: #d3f6db;
+}
+
+.levels-list__level-item_color_blue {
+  background-color: #92e5d6;
+}
+
+.levels-list__level-item_color_green {
+  background-color: #a1ef8b;
+}

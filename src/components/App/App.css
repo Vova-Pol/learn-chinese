@@ -1,12 +1,28 @@
+/* Colors Used
+background: #ff6347ff
+black-letters: #313e5c
+level1: #d3f6db
+level2: #92e5d6
+level3: #a1ef8b
+*/
+
 .app {
-  background-color: tomato;
+  background-color: #ff6347ff;
   height: 100vh;
   padding: 100px;
-  color: #fff;
+  color: #fdffff;
 }
 
 .app__title {
   margin: 0;
   margin-bottom: 20px;
   text-align: center;
+}
+
+.pal1 {
+  background-image: url('../../images/pal1.png');
+  width: 100px;
+  height: 50px;
+  background-size: cover;
+  border: 2px solid black;
 }
