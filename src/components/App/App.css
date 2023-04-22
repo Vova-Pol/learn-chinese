@@ -1,0 +1,12 @@
+.app {
+  background-color: tomato;
+  height: 100vh;
+  padding: 100px;
+  color: #fff;
+}
+
+.app__title {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}

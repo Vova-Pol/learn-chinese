@@ -1,0 +1,9 @@
+.quiz {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quiz__current-character {
+  font-size: 150px;
+}
