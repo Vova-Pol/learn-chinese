@@ -1,5 +1,5 @@
 import './Quiz.css';
-import { characters } from '../../data';
+import { characters } from '../../data/quiz';
 import { useState } from 'react';
 
 function Quiz() {
