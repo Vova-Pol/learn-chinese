@@ -15,11 +15,9 @@ function App() {
       <h1 className="app__title">Time to learn Chinese</h1>
       <Routes>
         <Route path="/levels" element={<LevelsList />} />
-        <Route path="/levels/:level" element={<LevelsItem />} />
+        <Route path="/levels/:level" element={<ExercisesList />} />
         <Route path="/quiz" element={<Quiz />} />
       </Routes>
-
-      <ExercisesList />
     </div>
   );
 }
