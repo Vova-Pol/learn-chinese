@@ -1,0 +1,51 @@
+.exercise-list {
+}
+
+.exercise-list__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 33px;
+}
+
+.exercise-list__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.exercise-list__title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.exercise-list__order-number {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.exercise-list__item-title {
+  margin: 0;
+  font-size: 25px;
+}
+
+.exercise-list__item-description {
+  font-size: 17px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.exercise-list__item-button {
+  width: 110px;
+  height: 30px;
+  border: none;
+  background-color: aqua;
+  color: #fff;
+}
