@@ -2,6 +2,8 @@ import './App.css';
 import Quiz from '../Quiz/Quiz';
 import LevelsList from '../LevelsList/LevelsList';
 import ExercisesList from '../ExercisesList/ExercisesList';
+import { Routes } from 'react-router-dom';
+import LevelsItem from '../LevelsItem/LevelsItem';
 
 function App() {
   return (
@@ -11,8 +13,12 @@ function App() {
       <div className="pal pal3"></div>
 
       <h1 className="app__title">Time to learn Chinese</h1>
-      {/* <Quiz /> */}
-      {/* <LevelsList /> */}
+      <Routes>
+        <Route path="/levels" element={<LevelsList />} />
+        <Route path="/levels/:level" element={<LevelsItem />} />
+        <Route path="/quiz" element={<Quiz />} />
+      </Routes>
+
       <ExercisesList />
     </div>
   );
