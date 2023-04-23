@@ -9,6 +9,7 @@
   font-size: 19px;
   cursor: pointer;
   transition: all 0.8s ease;
+  margin-bottom: 20px;
 }
 
 .levels-list__level-item:hover {
