@@ -10,12 +10,12 @@ function LevelsList() {
     <div className="levels-list">
       <h2 className="levels-list__title">Choose your level</h2>
       <ul className="levels-list__list">
-        {levels.map((stage) => {
+        {levels.map((level, index) => {
           return (
             <LevelsItem
-              stage={stage}
-              key={stage}
-              background={setBackground(levels.indexOf(stage), listItemsColors)}
+              level={level}
+              key={level}
+              background={setBackground(index, listItemsColors)}
             />
           );
         })}

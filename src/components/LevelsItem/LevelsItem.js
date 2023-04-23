@@ -2,7 +2,7 @@ import './LevelsItem.css';
 
 function LevelsItem(props) {
   function handleLevelsItemClick() {
-    console.log('Hi, its level ' + props.stage);
+    console.log('Hi, its level ' + props.level);
   }
   return (
     <li
@@ -10,7 +10,7 @@ function LevelsItem(props) {
       style={{ backgroundColor: props.background }}
       onClick={handleLevelsItemClick}
     >
-      {`Level ${props.stage}`}
+      {`Level ${props.level}`}
     </li>
   );
 }
