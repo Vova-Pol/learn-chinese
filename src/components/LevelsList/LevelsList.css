@@ -11,9 +11,10 @@
 .levels-list__list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 20px;
+  column-gap: 16px;
+  max-width: 800px;
   justify-content: flex-start;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
