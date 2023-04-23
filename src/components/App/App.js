@@ -2,7 +2,7 @@ import './App.css';
 import Quiz from '../Quiz/Quiz';
 import LevelsList from '../LevelsList/LevelsList';
 import ExercisesList from '../ExercisesList/ExercisesList';
-import { Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import LevelsItem from '../LevelsItem/LevelsItem';
 
 function App() {
