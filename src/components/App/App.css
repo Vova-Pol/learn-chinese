@@ -1,5 +1,5 @@
 /* Colors Used
-background: #ff6347ff
+background: #ff6347
 black-letters: #313e5c
 level1: #d3f6db
 level2: #92e5d6
@@ -7,7 +7,7 @@ level3: #a1ef8b
 */
 
 .app {
-  background-color: #ff6347ff;
+  background-color: #ff6347;
   height: 100vh;
   padding: 100px;
   color: #fdffff;
@@ -19,10 +19,20 @@ level3: #a1ef8b
   text-align: center;
 }
 
-.pal1 {
-  background-image: url('../../images/pal1.png');
+.pal {
   width: 100px;
   height: 50px;
   background-size: cover;
-  border: 2px solid black;
+  border: 1px solid rgb(255, 255, 255);
+}
+.pal1 {
+  background-image: url('../../images/pal1.png');
+}
+
+.pal2 {
+  background-image: url('../../images/pal2.png');
+}
+
+.pal3 {
+  background-image: url('../../images/pal3.png');
 }
