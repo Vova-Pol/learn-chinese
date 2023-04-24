@@ -3,7 +3,7 @@ import Quiz from '../Quiz/Quiz';
 import LevelsList from '../LevelsList/LevelsList';
 import ExercisesList from '../ExercisesList/ExercisesList';
 import { Routes, Route } from 'react-router-dom';
-import LevelsItem from '../LevelsItem/LevelsItem';
+import Search from '../Search/Search';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
         <Route path="/levels" element={<LevelsList />} />
         <Route path="/levels/:level" element={<ExercisesList />} />
         <Route path="/quiz" element={<Quiz />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
     </div>
   );
