@@ -1,0 +1,14 @@
+.header {
+  margin-bottom: 90px;
+}
+
+.header__link {
+  font-size: 18px;
+  margin-right: 22px;
+  transition: all 0.2s ease;
+}
+
+.header__link:hover {
+  color: #ffed48;
+  border-bottom: 5px solid #ffed48;
+}
