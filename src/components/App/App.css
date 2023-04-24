@@ -6,11 +6,36 @@ level2: #92e5d6
 level3: #a1ef8b
 */
 
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  line-height: 1em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .app {
   background-color: #ff6347;
-  height: 100vh;
   padding: 100px;
   color: #fdffff;
+  min-height: 100vh;
 }
 
 .app__title {
