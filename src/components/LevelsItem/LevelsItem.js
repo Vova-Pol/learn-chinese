@@ -5,7 +5,6 @@ function LevelsItem(props) {
   const navigate = useNavigate();
 
   function handleLevelsItemClick() {
-    console.log('Hi, its level ' + props.level);
     navigate(`/levels/${props.level}`);
   }
   return (
