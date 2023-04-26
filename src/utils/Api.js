@@ -12,7 +12,6 @@ class Api {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      credentials: 'include',
     };
 
     const requestUrl = this._baseUrl + urlEnding;
@@ -21,7 +20,7 @@ class Api {
       init.body = JSON.stringify(data);
     }
 
-    return fetch(url, init).then((res) => {
+    return fetch(requestUrl, init).then((res) => {
       if (res.ok) {
         return res.json();
       } else {
