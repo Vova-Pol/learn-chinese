@@ -1,5 +1,7 @@
 import './CreateFlashcard.css';
 import { useFormAndValidation } from '../../hooks/useFormAndValidation';
+import { api } from '../../utils/Api';
+import { useState } from 'react';
 
 function CreateFlashcard() {
   const { values, handleChange, setValues, errors, isValid, resetForm } =
@@ -10,15 +12,26 @@ function CreateFlashcard() {
       episode: '',
     });
 
+  const [resultText, setResultText] = useState('');
+  const [isSuccessful, setIsSuccessful] = useState(null);
+
   function handleSubmit(evt) {
     evt.preventDefault();
+    setResultText('');
+    api
+      .postFlashcard(values)
+      .then((res) => {
+        console.log(res);
+        setIsSuccessful(true);
+        setResultText('Карточка успешно создана!');
+      })
+      .catch((err) => {
+        setIsSuccessful(false);
+        setResultText('Произошла ошибка на сервере. Попробуйте ещё раз.');
+        console.error(err);
+      });
 
-    setValues({
-      character: '',
-      pinyin: '',
-      translation: '',
-      episode: '',
-    });
+    resetForm();
   }
 
   return (
@@ -65,6 +78,17 @@ function CreateFlashcard() {
           Create
         </button>
       </form>
+      {resultText ? (
+        <span
+          className={
+            isSuccessful
+              ? 'create-flashcard__result create-flashcard__result_type_success'
+              : 'create-flashcard__result create-flashcard__result_type_error'
+          }
+        >
+          {resultText}
+        </span>
+      ) : null}
     </div>
   );
 }
