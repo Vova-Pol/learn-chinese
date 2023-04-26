@@ -5,4 +5,6 @@ export const listItemsColors = [
   '#b8d4e3',
   '#eeffdb',
   '#c5f5b7',
+  '#ddedaa',
+  '#f0cf65',
 ];
