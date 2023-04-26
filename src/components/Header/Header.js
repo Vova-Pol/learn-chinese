@@ -14,6 +14,9 @@ function Header() {
         <Link className="header__link" to="/search">
           Search
         </Link>
+        <Link className="header__link" to="/flashcards">
+          Flashcards
+        </Link>
       </nav>
     </header>
   );

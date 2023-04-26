@@ -4,7 +4,7 @@ import { listItemsColors } from '../../data/colors';
 import { setBackground } from '../../utils/utils';
 
 function LevelsList() {
-  const levels = [1, 2, 3, 4, 5];
+  const levels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
   return (
     <div className="levels-list">

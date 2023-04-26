@@ -6,19 +6,21 @@ import { Routes, Route } from 'react-router-dom';
 import Search from '../Search/Search';
 import Header from '../Header/Header';
 import CreateFlashcard from '../CreateFlashcard/CreateFlashcard';
+import Flashcards from '../Flashcards/Flashcards';
 
 function App() {
   return (
     <div className="app">
       <Header />
       <main>
-        <CreateFlashcard />
-        {/* <Routes>
+        {/* <CreateFlashcard /> */}
+        <Routes>
+          <Route path="/flashcards" element={<Flashcards />} />
           <Route path="/levels" element={<LevelsList />} />
           <Route path="/levels/:level" element={<ExercisesList />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/search" element={<Search />} />
-        </Routes> */}
+        </Routes>
       </main>
     </div>
   );
