@@ -1,0 +1,40 @@
+.create-flashcard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.create-flashcard__title {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.create-flashcard__form {
+  max-width: 280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-flashcard__input {
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  padding: 7px;
+  padding-left: 12px;
+  background-color: #fff170;
+}
+
+.create-flashcard__input::placeholder {
+  color: #909090;
+}
+
+.create-flashcard__input:last-of-type {
+  margin-bottom: 20px;
+}
+
+.create-flashcard__button {
+  border: none;
+  border-radius: 10px;
+  padding: 7px;
+}
