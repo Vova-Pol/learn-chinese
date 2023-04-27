@@ -13,7 +13,7 @@ function App() {
     <div className="app">
       <Header />
       <main>
-        {/* <CreateFlashcard /> */}
+        <CreateFlashcard />
         <Routes>
           <Route path="/flashcards" element={<Flashcards />} />
           <Route path="/levels" element={<LevelsList />} />

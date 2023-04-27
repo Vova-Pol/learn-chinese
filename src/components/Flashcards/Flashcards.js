@@ -21,9 +21,9 @@ function Flashcards() {
     <div className="flashcards">
       <h1 className="flashcards__title">Flashcards</h1>
       <ul className="flashcards__list">
-        {flashcardsList.map((card, i) => {
+        {flashcardsList.map((card) => {
           return (
-            <li className="flashcards__item" key={i}>
+            <li className="flashcards__item" key={card._id}>
               <h3 className="flashcards__item-title">{card.character}</h3>
               <div className="flashcards__item-info">
                 <p className="flashcards__item-pinyin">{card.pinyin}</p>

@@ -9,6 +9,7 @@ function CreateFlashcard() {
       character: '',
       pinyin: '',
       translation: '',
+      origin: '',
       episode: '',
     });
 
@@ -68,11 +69,20 @@ function CreateFlashcard() {
         <input
           className="create-flashcard__input"
           type="text"
+          name="origin"
+          value={values.origin}
+          onChange={handleChange}
+          required
+          placeholder="Chinese Classes 101"
+        ></input>
+        <input
+          className="create-flashcard__input"
+          type="text"
           name="episode"
           value={values.episode}
           onChange={handleChange}
           required
-          placeholder="1"
+          placeholder="1 / At the bakery"
         ></input>
         <button type="submit" className="create-flashcard__button">
           Create
