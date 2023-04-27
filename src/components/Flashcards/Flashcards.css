@@ -8,31 +8,3 @@
   text-align: center;
   margin-bottom: 35px;
 }
-
-.flashcards__list {
-  width: 100%;
-  max-width: 700px;
-}
-
-.flashcards__item {
-  background-color: #f0cf65;
-  margin-bottom: 10px;
-  display: flex;
-  padding: 20px;
-  align-items: center;
-  border-radius: 10px;
-  color: #313e5c;
-}
-
-.flashcards__item-title {
-  font-size: 28px;
-  margin-right: 20px;
-}
-
-.flashcards__item-pinyin {
-  font-size: 18px;
-}
-
-.flashcards__item-translation {
-  font-size: 15px;
-}
