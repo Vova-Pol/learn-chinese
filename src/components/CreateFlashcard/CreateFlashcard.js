@@ -19,6 +19,7 @@ function CreateFlashcard() {
   function handleSubmit(evt) {
     evt.preventDefault();
     setResultText('');
+    console.log(values);
     api
       .postFlashcard(values)
       .then((res) => {
