@@ -7,15 +7,20 @@ import Search from '../Search/Search';
 import Header from '../Header/Header';
 import CreateFlashcard from '../CreateFlashcard/CreateFlashcard';
 import Flashcards from '../Flashcards/Flashcards';
+import FlashcardsList from '../FlashcardsList/FlashcardsList';
 
 function App() {
   return (
     <div className="app">
       <Header />
       <main>
-        <CreateFlashcard />
         <Routes>
+          <Route path="/create-flashcard" element={<CreateFlashcard />} />
           <Route path="/flashcards" element={<Flashcards />} />
+          <Route
+            path="/flashcards/:origin/:episode"
+            element={<FlashcardsList />}
+          />
           <Route path="/levels" element={<LevelsList />} />
           <Route path="/levels/:level" element={<ExercisesList />} />
           <Route path="/quiz" element={<Quiz />} />
