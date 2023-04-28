@@ -3,6 +3,7 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   column-gap: 13px;
   row-gap: 13px;
@@ -17,9 +18,10 @@
   flex-direction: column;
   display: flex;
   background-color: #f0cf65;
-  align-items: center;
+  align-items: flex-start;
   border-radius: 10px;
-  max-width: 25%;
+  max-width: 30%;
+  width: inherit;
   transition: all 0.8s ease;
   position: relative;
 }
