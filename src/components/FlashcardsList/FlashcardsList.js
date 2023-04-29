@@ -3,6 +3,7 @@ import { api } from '../../utils/Api';
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { BKRS_SERACH_URL } from '../../utils/appConfig';
+import VideoOrigin from '../VideoOrigin/VideoOrigin';
 
 function FlashcardsList() {
   const [flashcardsList, setFlashcardsList] = useState([]);
@@ -25,6 +26,7 @@ function FlashcardsList() {
       <h2 className="flashcards-list__subtitle">
         {origin} • {episode}
       </h2>
+      <VideoOrigin />
       <div className="flashcards-list__links-container">
         <Link
           to={`/flashcards/${origin}/${episode}/study`}
