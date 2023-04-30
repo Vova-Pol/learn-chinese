@@ -8,6 +8,7 @@ import Header from '../Header/Header';
 import CreateFlashcard from '../CreateFlashcard/CreateFlashcard';
 import Flashcards from '../Flashcards/Flashcards';
 import FlashcardsList from '../FlashcardsList/FlashcardsList';
+import Study from '../Study/Study';
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
           <Route
             path="/flashcards/:origin/:episode"
             element={<FlashcardsList />}
+          />
+          <Route
+            path="/flashcards/:origin/:episode/study"
+            element={<Study />}
           />
           <Route path="/levels" element={<LevelsList />} />
           <Route path="/levels/:level" element={<ExercisesList />} />

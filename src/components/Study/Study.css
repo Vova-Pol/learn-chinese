@@ -1,0 +1,59 @@
+.study {
+}
+
+.study__title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.study__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f0cf65;
+  color: #313e5c;
+  max-width: 700px;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 0 auto 20px auto;
+  width: fit-content;
+  min-height: 200px;
+}
+
+.study__character {
+  text-align: center;
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.study__pinyin {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.study__translation {
+  max-width: 300px;
+}
+
+.study__buttons-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.study__arrow-button {
+  background-color: #bb3b24;
+  color: #fff;
+  font-size: 25px;
+  height: 35px;
+  width: 60px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.study__arrow-button:hover {
+  filter: contrast(1.2);
+}
