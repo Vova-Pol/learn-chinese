@@ -8,9 +8,9 @@ function EpisodesByOrigin(props) {
     <div className="episodes-by-origin">
       <h2 className="episodes-by-origin__title">{props.origin}</h2>
       <ul className="episodes-by-origin__list">
-        {uniqueEpisodesList.map((episode) => {
+        {uniqueEpisodesList.map((episode, i) => {
           return (
-            <li className="episodes-by-origin__item">
+            <li key={i} className="episodes-by-origin__item">
               <Link
                 className="episodes-by-origin__link"
                 to={`/flashcards/${props.origin}/${episode}`}

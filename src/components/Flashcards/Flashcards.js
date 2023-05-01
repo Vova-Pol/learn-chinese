@@ -26,12 +26,13 @@ function Flashcards() {
   return (
     <div className="flashcards">
       <h1 className="flashcards__title">Flashcards</h1>
-      {originsList.map((origin) => {
+      {originsList.map((origin, i) => {
         const flashcardsByOriginList = flashcardsList.filter(
           (card) => card.origin === origin,
         );
         return (
           <EpisodesByOrigin
+            key={i}
             origin={origin}
             flashcardsList={flashcardsByOriginList}
           />
