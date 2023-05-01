@@ -18,15 +18,36 @@ const littleReunionEpisodes = {
   2: {
     origin: '小欢喜',
     videoId: 'mTMb8e_gDzE',
-    startTime: '1:41',
-    endTime: '3:15',
+    startTime: '3:15',
+    endTime: '3:55',
   },
 
   3: {
     origin: '小欢喜',
     videoId: 'mTMb8e_gDzE',
-    startTime: '1:41',
-    endTime: '3:15',
+    startTime: '3:55',
+    endTime: '4:42',
+  },
+
+  4: {
+    origin: '小欢喜',
+    videoId: 'mTMb8e_gDzE',
+    startTime: '4:42',
+    endTime: '5:13',
+  },
+
+  5: {
+    origin: '小欢喜',
+    videoId: 'mTMb8e_gDzE',
+    startTime: '5:13',
+    endTime: '5:56',
+  },
+
+  6: {
+    origin: '小欢喜',
+    videoId: 'mTMb8e_gDzE',
+    startTime: '5:56',
+    endTime: '6:56',
   },
 };
 
