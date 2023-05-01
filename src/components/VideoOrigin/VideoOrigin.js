@@ -17,15 +17,6 @@ function VideoOrigin() {
     );
 
     const { videoId, startTime, endTime } = episodeFound;
-    // ORIGINS_DATA.forEach((originElem) => {
-    //   if (origin === originElem.title) {
-    //     origin.episodes.forEach
-    //     const episodeElem = originElem.episodes[episode];
-    //     videoId = episodeElem.videoId;
-    //     startTime = episodeElem.startTime;
-    //     endTime = episodeElem.endTime;
-    //   }
-    // });
     return { videoId, startTime, endTime };
   };
 
