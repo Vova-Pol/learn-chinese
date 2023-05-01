@@ -4,10 +4,13 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { BKRS_SERACH_URL } from '../../utils/appConfig';
 import VideoOrigin from '../VideoOrigin/VideoOrigin';
+import EditFlashcardPopup from '../EditFlashcardPopup/EditFlashcardPopup';
 
 function FlashcardsList() {
   const [flashcardsList, setFlashcardsList] = useState([]);
   const { origin, episode } = useParams();
+  const [editableCard, setEditableCard] = useState({});
+  const [popupIsOpened, setPopupIsOpened] = useState(false);
 
   useEffect(() => {
     api
@@ -20,6 +23,12 @@ function FlashcardsList() {
         console.error(err);
       });
   }, []);
+
+  function handleOnEdit(cardElem) {
+    setEditableCard(cardElem);
+    setPopupIsOpened(true);
+  }
+
   return (
     <div className="flashcards-list">
       <h1 className="flashcards-list__title">Flashcards</h1>
@@ -62,8 +71,11 @@ function FlashcardsList() {
                       {card.translation}
                     </p>
                   </div>
-                  <span className="flashcards-list__item-edit-button"></span>
                 </Link>
+                <span
+                  className="flashcards-list__item-edit-button"
+                  onClick={handleOnEdit}
+                ></span>
               </li>
             );
           } else {
@@ -71,6 +83,7 @@ function FlashcardsList() {
           }
         })}
       </ul>
+      {popupIsOpened ? <EditFlashcardPopup cardData={editableCard} /> : null}
     </div>
   );
 }
