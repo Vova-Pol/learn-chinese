@@ -2,19 +2,17 @@ import { useEffect, useState } from 'react';
 import './Flashcards.css';
 import { api } from '../../utils/Api';
 import EpisodesByOrigin from '../EpisodesByOrigin/EpisodesByOrigin';
+import { ORIGINS_DATA } from '../../data/episodes';
 
 function Flashcards() {
   const [flashcardsList, setFlashcardsList] = useState([]);
-  const [originsList, setOriginsList] = useState([]);
+  const [originsList, setOriginsList] = useState(ORIGINS_DATA);
 
   useEffect(() => {
     api
       .getAllFlashcards()
       .then((res) => {
         setFlashcardsList(res.data);
-        const allOrigins = res.data.map((card) => card.origin);
-        const uniqueOrigins = [...new Set(allOrigins)];
-        setOriginsList(uniqueOrigins);
       })
       .catch((err) => {
         console.error(err);
@@ -27,14 +25,11 @@ function Flashcards() {
     <div className="flashcards">
       <h1 className="flashcards__title">Flashcards</h1>
       {originsList.map((origin, i) => {
-        const flashcardsByOriginList = flashcardsList.filter(
-          (card) => card.origin === origin,
-        );
         return (
           <EpisodesByOrigin
             key={i}
-            origin={origin}
-            flashcardsList={flashcardsByOriginList}
+            originTitle={origin.title}
+            episodes={origin.episodes}
           />
         );
       })}

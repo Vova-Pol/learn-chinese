@@ -2,20 +2,18 @@ import { Link } from 'react-router-dom';
 import './EpisodesByOrigin.css';
 
 function EpisodesByOrigin(props) {
-  const allEpisodesList = props.flashcardsList.map((card) => card.episode);
-  const uniqueEpisodesList = [...new Set(allEpisodesList)];
   return (
     <div className="episodes-by-origin">
-      <h2 className="episodes-by-origin__title">{props.origin}</h2>
+      <h2 className="episodes-by-origin__title">{props.originTitle}</h2>
       <ul className="episodes-by-origin__list">
-        {uniqueEpisodesList.map((episode, i) => {
+        {props.episodes.map((episode, i) => {
           return (
             <li key={i} className="episodes-by-origin__item">
               <Link
                 className="episodes-by-origin__link"
-                to={`/flashcards/${props.origin}/${episode}`}
+                to={`/flashcards/${props.originTitle}/${episode.title}`}
               >
-                {episode}
+                {episode.title}
               </Link>
             </li>
           );
