@@ -36,24 +36,34 @@
   max-width: 300px;
 }
 
-.study__buttons-container {
+.study__keys-container {
   display: flex;
   justify-content: center;
   column-gap: 10px;
 }
 
-.study__arrow-button {
+.study__arrow-left,
+.study__arrow-right,
+.study__space {
   background-color: #bb3b24;
   color: #fff;
   font-size: 25px;
+  line-height: 25px;
+  text-align: center;
+  padding: 5px;
   height: 35px;
   width: 60px;
-  border: none;
   border-radius: 8px;
-  cursor: pointer;
   transition: all 0.2s;
 }
 
-.study__arrow-button:hover {
+.study__space {
+  width: 120px;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 10px;
+}
+
+.study__key-pressed {
   filter: contrast(1.2);
 }

@@ -1,12 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import './Study.css';
 import { api } from '../../utils/Api';
 import { useParams } from 'react-router-dom';
 
 function Study(props) {
   const { origin, episode } = useParams();
-  const [cardsList, setCardsList] = useState([]);
-  const [shownCard, setShownCard] = useState({});
+  const [cardsList, _setCardsList] = useState([]);
+  const [shownCard, _setShownCard] = useState({});
+
+  const leftArrowCode = 37;
+  const rightArrowCode = 39;
+  const spaceCode = 32;
 
   useEffect(() => {
     api
@@ -15,31 +19,80 @@ function Study(props) {
         const cardsList = res.data.filter(
           (card) => card.origin === origin && card.episode === episode,
         );
+
         setCardsList(cardsList);
         setShownCard(cardsList[0]);
+
+        window.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+          window.removeEventListener('keydown', handleKeyDown);
+        };
       })
       .catch((err) => {
         console.error(err);
       });
   }, []);
 
-  function onLeftArrow() {
-    if (shownCard === cardsList[0]) {
-      return;
-    } else {
-      const newIndex = cardsList.indexOf(shownCard) - 1;
-      setShownCard(cardsList[newIndex]);
+  // Непонятная костыльная идея с useRef для получения
+  // актуального значения стейта в eventListener (нашел на stackOverflow)
+
+  const shownCardRef = useRef(shownCard);
+
+  function setShownCard(card) {
+    shownCardRef.current = card;
+    _setShownCard(card);
+  }
+
+  const cardsListRef = useRef(cardsList);
+
+  function setCardsList(cardsList) {
+    cardsListRef.current = cardsList;
+    _setCardsList(cardsList);
+  }
+
+  function handleKeyDown(evt) {
+    const currCard = shownCardRef.current;
+    const currList = cardsListRef.current;
+    let newCard;
+    switch (evt.keyCode) {
+      case leftArrowCode:
+        evt.preventDefault();
+        newCard = currList[currList.indexOf(currCard) - 1];
+        setShownCard(newCard);
+        break;
+      case rightArrowCode:
+        evt.preventDefault();
+        newCard = currList[currList.indexOf(currCard) + 1];
+        setShownCard(newCard);
+        break;
+      case spaceCode:
+        evt.preventDefault();
+        setShownCard(currList[currList.indexOf(currCard) + 1]);
+        break;
+      default:
+        break;
     }
   }
 
-  function onRightArrow() {
-    if (shownCard === cardsList[cardsList.length - 1]) {
-      return;
-    } else {
-      const newIndex = cardsList.indexOf(shownCard) + 1;
-      setShownCard(cardsList[newIndex]);
-    }
-  }
+  // function handleKeyup(evt) {
+  //   switch (evt.keyCode) {
+  //     case leftArrowCode:
+  //       evt.preventDefault();
+  //       console.log('left');
+  //       break;
+  //     case rightArrowCode:
+  //       evt.preventDefault();
+  //       console.log('right');
+  //       break;
+  //     case spaceCode:
+  //       evt.preventDefault();
+  //       console.log('space');
+  //       break;
+  //     default:
+  //       return;
+  //   }
+  // }
 
   return (
     <div className="study">
@@ -49,21 +102,10 @@ function Study(props) {
         <p className="study__pinyin">{shownCard.pinyin}</p>
         <p className="study__translation">{shownCard.translation}</p>
       </div>
-      <div className="study__buttons-container">
-        <button
-          onClick={onLeftArrow}
-          type="button"
-          className="study__arrow-button"
-        >
-          &#8592;
-        </button>
-        <button
-          onClick={onRightArrow}
-          type="button"
-          className="study__arrow-button"
-        >
-          &#8594;
-        </button>
+      <div className="study__keys-container">
+        <span className="study__arrow-left">&#8592;</span>
+        <span className="study__space">space</span>
+        <span className="study__arrow-right">&#8594;</span>
       </div>
     </div>
   );
