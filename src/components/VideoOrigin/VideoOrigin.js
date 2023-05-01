@@ -10,31 +10,22 @@ function VideoOrigin() {
 
   const { origin, episode } = useParams();
 
-  // Кривой способ получения данных для ссылки на видео
-  // Фикс: исправить данные карточек и данные ORIGINS_DATA так,
-  // чтобы они имели связь (занести ORIGINS в БД)
-
-  const getVideoData = (origin, episodeTitle) => {
+  const getVideoData = (origin, episode) => {
     let videoId;
     let startTime;
     let endTime;
-    if (origin === '小欢喜') {
-      const episode = ORIGINS_DATA[0].episodes.episodeTitle;
-      videoId = episode.videoId;
-      startTime = episode.startTime;
-      endTime = episode.endTime;
-      return { videoId, startTime, endTime };
-    } else if (origin === 'ChineseClass101.com') {
-      const episode = ORIGINS_DATA[1].episodes[episodeTitle];
-      videoId = episode.videoId;
-      startTime = episode.startTime;
-      endTime = episode.endTime;
-      return { videoId, startTime, endTime };
-    }
+    ORIGINS_DATA.forEach((originElem) => {
+      if (origin === originElem.title) {
+        const episodeElem = originElem.episodes[episode];
+        videoId = episodeElem.videoId;
+        startTime = episodeElem.startTime;
+        endTime = episodeElem.endTime;
+      }
+    });
+    return { videoId, startTime, endTime };
   };
 
   const { videoId, startTime, endTime } = getVideoData(origin, episode);
-  console.log(videoId, startTime);
 
   return (
     <div className="video-origin">
