@@ -11,17 +11,21 @@ function VideoOrigin() {
   const { origin, episode } = useParams();
 
   const getVideoData = (origin, episode) => {
-    let videoId;
-    let startTime;
-    let endTime;
-    ORIGINS_DATA.forEach((originElem) => {
-      if (origin === originElem.title) {
-        const episodeElem = originElem.episodes[episode];
-        videoId = episodeElem.videoId;
-        startTime = episodeElem.startTime;
-        endTime = episodeElem.endTime;
-      }
-    });
+    const originFound = ORIGINS_DATA.find((elem) => elem.title === origin);
+    const episodeFound = originFound.episodes.find(
+      (elem) => elem.title === episode,
+    );
+
+    const { videoId, startTime, endTime } = episodeFound;
+    // ORIGINS_DATA.forEach((originElem) => {
+    //   if (origin === originElem.title) {
+    //     origin.episodes.forEach
+    //     const episodeElem = originElem.episodes[episode];
+    //     videoId = episodeElem.videoId;
+    //     startTime = episodeElem.startTime;
+    //     endTime = episodeElem.endTime;
+    //   }
+    // });
     return { videoId, startTime, endTime };
   };
 
