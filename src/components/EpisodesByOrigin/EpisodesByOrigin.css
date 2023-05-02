@@ -4,7 +4,23 @@
 }
 
 .episodes-by-origin__title {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 400;
+  border-bottom: 2px solid #f0cf65;
+  width: 50%;
+}
+
+.episodes-by-origin__info-container {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.episodes-by-origin__thumbnail {
+  width: 40%;
+  border-radius: 10px;
+  margin-right: 20px;
 }
 
 .episodes-by-origin__list {
@@ -25,6 +41,9 @@
   min-height: 40px;
   background-color: #f0cf65;
   border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 15px;
+  line-height: 15px;
   transition: all 0.5s ease;
 }
 
