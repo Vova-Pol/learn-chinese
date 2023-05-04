@@ -1,7 +1,7 @@
 import './LevelsList.css';
 import LevelsItem from '../LevelsItem/LevelsItem';
 import { listItemsColors } from '../../data/colors';
-import { setBackground } from '../../utils/utils';
+import { setBackground } from '../../utils/utils.ts';
 
 function LevelsList() {
   const levels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
