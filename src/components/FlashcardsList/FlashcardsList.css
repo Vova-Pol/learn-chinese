@@ -10,6 +10,7 @@
 .flashcards-list__subtitle {
   text-align: center;
   margin-bottom: 50px;
+  font-weight: 400;
 }
 
 .flashcards-list__links-container {
@@ -39,6 +40,19 @@
 .flashcards-list__quiz-link:hover {
   filter: contrast(1.2);
   transform: scale(1.05);
+}
+
+.flashcards-list__drop-down-button {
+  background-color: #bb3b23;
+  width: fit-content;
+  padding: 10px 15px;
+  border-radius: 30px;
+  margin: 0 auto 20px auto;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.flashcards-list__drop-down-arrow {
 }
 
 .flashcards-list__list {
@@ -76,6 +90,7 @@
 .flashcards-list__item-title {
   font-size: 28px;
   margin-right: 20px;
+  margin-bottom: 8px;
 }
 
 .flashcards-list__item-pinyin {

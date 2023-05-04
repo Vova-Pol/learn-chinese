@@ -5,12 +5,16 @@ import { Link, useParams } from 'react-router-dom';
 import { BKRS_SERACH_URL } from '../../utils/appConfig';
 import VideoOrigin from '../VideoOrigin/VideoOrigin';
 import EditFlashcardPopup from '../EditFlashcardPopup/EditFlashcardPopup';
+import CreateFlashcard from '../CreateFlashcard/CreateFlashcard';
 
 function FlashcardsList() {
   const [flashcardsList, setFlashcardsList] = useState([]);
   const { origin, episode } = useParams();
   const [editableCard, setEditableCard] = useState({});
-  const [popupIsOpened, setPopupIsOpened] = useState(false);
+  const [editFlashcardPopupIsOpened, setEditFlashcardPopupIsOpened] =
+    useState(false);
+  const [addFlashcardsDropDownIsOpened, setAddFlashcardDropDownIsOpened] =
+    useState(false);
 
   useEffect(() => {
     api
@@ -26,7 +30,11 @@ function FlashcardsList() {
 
   function handleOnEdit(cardElem) {
     setEditableCard(cardElem);
-    setPopupIsOpened(true);
+    setEditFlashcardPopupIsOpened(true);
+  }
+
+  function handleCheckbox() {
+    setAddFlashcardDropDownIsOpened(!addFlashcardsDropDownIsOpened);
   }
 
   return (
@@ -50,6 +58,16 @@ function FlashcardsList() {
           Quiz
         </Link>
       </div>
+      <div
+        className="flashcards-list__drop-down-button"
+        onClick={handleCheckbox}
+      >
+        Add a flashcard
+        <span className="flashcards-list__drop-down-arrow"></span>
+      </div>
+      {addFlashcardsDropDownIsOpened ? (
+        <CreateFlashcard episode={episode} />
+      ) : null}
       <ul className="flashcards-list__list">
         {flashcardsList.map((card) => {
           if (card.origin === origin && card.episode === episode) {
@@ -83,7 +101,9 @@ function FlashcardsList() {
           }
         })}
       </ul>
-      {popupIsOpened ? <EditFlashcardPopup cardData={editableCard} /> : null}
+      {editFlashcardPopupIsOpened ? (
+        <EditFlashcardPopup cardData={editableCard} />
+      ) : null}
     </div>
   );
 }
