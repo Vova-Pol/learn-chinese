@@ -9,6 +9,8 @@
   border-radius: 20px;
   border: 5px solid #f0cf65;
   box-sizing: content-box;
+  width: 720px;
+  height: 405px;
 }
 
 .video-origin__player-buttons {

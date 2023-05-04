@@ -1,26 +1,13 @@
 import { useState } from 'react';
 import './VideoOrigin.css';
-import { renderYouTubeLink } from '../../utils/utils';
 import { useParams } from 'react-router-dom';
-import { ORIGINS_DATA } from '../../data/episodes';
+import { getVideoFile } from '../../utils/utils.ts';
 
 function VideoOrigin() {
   const [replay, setReplay] = useState(false);
   const [playerSpeed, setPlayerSpeed] = useState(1);
 
   const { origin, episode } = useParams();
-
-  const getVideoData = (origin, episode) => {
-    const originFound = ORIGINS_DATA.find((elem) => elem.title === origin);
-    const episodeFound = originFound.episodes.find(
-      (elem) => elem.title === episode,
-    );
-
-    const { videoId, startTime, endTime } = episodeFound;
-    return { videoId, startTime, endTime };
-  };
-
-  const { videoId, startTime, endTime } = getVideoData(origin, episode);
 
   return (
     <div className="video-origin">
@@ -30,7 +17,7 @@ function VideoOrigin() {
         type="text/html"
         width="480"
         height="270"
-        src={renderYouTubeLink(videoId, startTime, endTime)}
+        src={getVideoFile(origin, episode)}
         allowFullScreen
       ></iframe>
       <div className="video-origin__player-buttons">
