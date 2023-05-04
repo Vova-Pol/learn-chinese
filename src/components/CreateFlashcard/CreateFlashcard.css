@@ -17,6 +17,10 @@
   margin-bottom: 10px;
 }
 
+.create-flashcard__label {
+  margin-bottom: 3px;
+}
+
 .create-flashcard__input {
   margin-bottom: 10px;
   border: none;
