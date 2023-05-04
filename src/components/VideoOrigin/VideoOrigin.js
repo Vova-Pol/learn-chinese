@@ -11,15 +11,12 @@ function VideoOrigin() {
 
   return (
     <div className="video-origin">
-      <iframe
+      <video
         className="video-origin__video"
-        id="ytplayer"
-        type="text/html"
-        width="480"
-        height="270"
         src={getVideoFileLocal(episode)}
-        allowFullScreen
-      ></iframe>
+        controls
+        preload="auto"
+      ></video>
       <div className="video-origin__player-buttons">
         <button type="button" className="video-origin__speed-button"></button>
         <button type="button" className="video-origin__replay-button"></button>

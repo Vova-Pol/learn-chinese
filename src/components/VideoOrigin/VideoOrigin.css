@@ -13,6 +13,10 @@
   height: 405px;
 }
 
+.video-origin__video:focus-visible {
+  outline: none;
+}
+
 .video-origin__player-buttons {
   position: absolute;
   right: -40px;
