@@ -20,6 +20,6 @@ export function renderYouTubeLink(videoId, startTime, endTime) {
   return `https://www.youtube.com/embed/${videoId}?disablekb=0&end=${endSec}&fs=0&modestbranding=1&start=${startSec}&color=white`;
 }
 
-export function getVideoFile(originName: string, episodeName: string): string {
-  return require(`../videos/${originName}/${episodeName}/100.mp4`);
+export function getVideoFileLocal(episodeName: string): string {
+  return require(`/Users/vovapolianitsa/Desktop/Китайский/${episodeName}/100.mp4`);
 }

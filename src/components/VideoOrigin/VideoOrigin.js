@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './VideoOrigin.css';
 import { useParams } from 'react-router-dom';
-import { getVideoFile } from '../../utils/utils.ts';
+import { getVideoFileLocal } from '../../utils/utils.ts';
 
 function VideoOrigin() {
   const [replay, setReplay] = useState(false);
@@ -17,7 +17,7 @@ function VideoOrigin() {
         type="text/html"
         width="480"
         height="270"
-        src={getVideoFile(origin, episode)}
+        src={getVideoFileLocal(episode)}
         allowFullScreen
       ></iframe>
       <div className="video-origin__player-buttons">
