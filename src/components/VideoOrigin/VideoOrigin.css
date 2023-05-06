@@ -25,10 +25,10 @@
   flex-direction: column;
 }
 
-.video-origin__replay-button,
 .video-origin__speed-button {
+  background-image: url('../../images/speed-icon.png');
   height: 30px;
-  width: 30px;
+  width: fit-content;
   border: none;
   border-radius: 8px;
   padding: 4px;
@@ -41,15 +41,6 @@
   transition: all 0.2s;
 }
 
-.video-origin__replay-button {
-  background-image: url('../../images/replay-icon.png');
-}
-
-.video-origin__speed-button {
-  background-image: url('../../images/speed-icon.png');
-}
-
-.video-origin__replay-button:hover,
 .video-origin__speed-button:hover {
   filter: contrast(1.2);
 }
