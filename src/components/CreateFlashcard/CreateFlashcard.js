@@ -42,7 +42,7 @@ function CreateFlashcard(props) {
     <div className="create-flashcard">
       <form className="create-flashcard__form" onSubmit={handleSubmit}>
         <label htmlFor="character" className="create-flashcard__label">
-          Character:
+          Иероглиф:
         </label>
         <input
           className="create-flashcard__input"
@@ -55,7 +55,7 @@ function CreateFlashcard(props) {
           placeholder="你好"
         ></input>
         <label htmlFor="pinyin" className="create-flashcard__label">
-          Pinyin:
+          Пиньинь:
         </label>
         <input
           className="create-flashcard__input"
@@ -68,7 +68,7 @@ function CreateFlashcard(props) {
           placeholder="nǐ hǎo"
         ></input>
         <label htmlFor="translation" className="create-flashcard__label">
-          Translation:
+          Перевод:
         </label>
         <input
           className="create-flashcard__input"
@@ -81,7 +81,7 @@ function CreateFlashcard(props) {
           placeholder="здравствуйте, привет"
         ></input>
         <label htmlFor="episode" className="create-flashcard__label">
-          Episode:
+          Эпизод:
         </label>
         <input
           className="create-flashcard__input"
@@ -93,7 +93,7 @@ function CreateFlashcard(props) {
           required
         ></input>
         <label htmlFor="origin" className="create-flashcard__label">
-          Origin:
+          Источник:
         </label>
         <select
           className="create-flashcard__input"
@@ -114,7 +114,7 @@ function CreateFlashcard(props) {
         </select>
 
         <button type="submit" className="create-flashcard__button">
-          Create
+          Создать
         </button>
       </form>
       {resultText ? (

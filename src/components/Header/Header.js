@@ -10,13 +10,13 @@ function Header() {
           <Logo className="header__logo" />
         </Link>
         <Link className="header__link" to="/quiz">
-          Quiz
+          Диктант
         </Link>
         <Link className="header__link" to="/search">
-          Search
+          Поиск
         </Link>
         <Link className="header__link" to="/flashcards">
-          Flashcards
+          Карточки
         </Link>
       </nav>
     </header>

@@ -18,7 +18,6 @@ function EpisodesByOrigin(props) {
       <h2 className="episodes-by-origin__title">{props.originTitle}</h2>
       <div className="episodes-by-origin__info-container">
         <img
-          // src={require(props.thumbnailPath)}
           src={thumbnail}
           alt={props.title}
           className="episodes-by-origin__thumbnail"

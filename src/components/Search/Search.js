@@ -18,31 +18,34 @@ function Search() {
     setResultList(result);
   }
 
+  // Отображение надописи "Найдено 25 иероглифов" требует написания
+  // функции-утилиты, которая будет подставлять нужное окончание
+
   return (
     <div className="search">
-      <h1 className="search__title">Frequency Dictionary Search</h1>
+      <h1 className="search__title">Поиск по частотному словарю</h1>
       <form className="search__form" onSubmit={handleSubmit}>
         <input
           className="search__input"
           name="search"
           type="text"
-          placeholder="&#128270; find the hieroglyph"
+          placeholder="&#128270; введите символ"
           value={values.search}
           onChange={handleChange}
           required
         ></input>
         <button type="submit" className="search__submit-button">
-          Search
+          Поиск
         </button>
       </form>
       <div className="search__result-container">
         <h2 className="search__result-character">{resultList[0]}</h2>
-        <span className="search__amount-text">
+        {/* <span className="search__amount-text">
           {resultList.length +
-            ' hieroglyph' +
-            (resultList.length > 1 ? 's' : '') +
-            ' found!'}
-        </span>
+            ' иероглиф' +
+            (String(resultList.length).endsWith('1') ? '' : 'ов') +
+            ' найдено!'}
+        </span> */}
       </div>
       <ul className="search__result-list">
         {resultList.map((char, i) => {

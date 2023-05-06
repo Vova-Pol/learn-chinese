@@ -39,7 +39,7 @@ function FlashcardsList() {
 
   return (
     <div className="flashcards-list">
-      <h1 className="flashcards-list__title">Flashcards</h1>
+      <h1 className="flashcards-list__title">Карточки</h1>
       <h2 className="flashcards-list__subtitle">
         {origin} • {episode}
       </h2>
@@ -49,20 +49,20 @@ function FlashcardsList() {
           to={`/flashcards/${origin}/${episode}/study`}
           className="flashcards-list__study-link"
         >
-          Study
+          Учить
         </Link>
         <Link
           to={`/flashcards/${origin}/${episode}/quiz`}
           className="flashcards-list__quiz-link"
         >
-          Quiz
+          Пройти диктант
         </Link>
       </div>
       <div
         className="flashcards-list__drop-down-button"
         onClick={handleCheckbox}
       >
-        Add a flashcard
+        Создать карточку
         <span className="flashcards-list__drop-down-arrow"></span>
       </div>
       {addFlashcardsDropDownIsOpened ? (

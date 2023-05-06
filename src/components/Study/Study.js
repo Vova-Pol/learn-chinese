@@ -96,7 +96,7 @@ function Study(props) {
 
   return (
     <div className="study">
-      <h1 className="study__title">Study and take a quiz!</h1>
+      <h1 className="study__title">Учим новые иероглифы</h1>
       <div className="study__card">
         <h3 className="study__character">{shownCard.character}</h3>
         <p className="study__pinyin">{shownCard.pinyin}</p>

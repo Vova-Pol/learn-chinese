@@ -23,7 +23,7 @@ function Flashcards() {
   console.log(originsList);
   return (
     <div className="flashcards">
-      <h1 className="flashcards__title">Flashcards</h1>
+      <h1 className="flashcards__title">Карточки</h1>
       {originsList.map((origin, i) => {
         return (
           <EpisodesByOrigin
