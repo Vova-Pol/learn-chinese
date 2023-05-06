@@ -1,3 +1,4 @@
+import '../../index.css';
 import './App.css';
 import Quiz from '../Quiz/Quiz';
 import { Routes, Route } from 'react-router-dom';
@@ -7,6 +8,7 @@ import CreateFlashcard from '../CreateFlashcard/CreateFlashcard';
 import Flashcards from '../Flashcards/Flashcards';
 import FlashcardsList from '../FlashcardsList/FlashcardsList';
 import Study from '../Study/Study';
+import Main from '../Main/Main';
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
       <Header />
       <main>
         <Routes>
+          <Route path="/" element={<Main />} />
           <Route path="/create-flashcard" element={<CreateFlashcard />} />
           <Route path="/flashcards" element={<Flashcards />} />
           <Route

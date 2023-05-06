@@ -1,0 +1,88 @@
+.main {
+}
+
+.main__title-character {
+  display: block;
+  font-family: 'Chinese-Font', sans-serif;
+  text-align: center;
+  font-size: 100px;
+  line-height: 1em;
+  font-weight: 100;
+  color: #f0cf65;
+}
+
+.main__title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin: 0 50px 100px 50px;
+  border-bottom: 2px solid #f0cf65;
+}
+
+.section-title {
+  font-size: 46px;
+  font-weight: 500;
+}
+
+.main__section {
+  margin-bottom: 100px;
+}
+
+.greeting {
+  display: flex;
+  max-height: 280px;
+}
+
+.greeting__title-container {
+  max-width: 50%;
+  margin-right: 25px;
+}
+
+.greeting__title {
+  margin-bottom: 18px;
+}
+
+.greeting__text {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+
+.greeting__image {
+  max-width: 50%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+.functionality {
+}
+
+.functionality__title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.functionality__info {
+  display: flex;
+}
+
+.functionality__image {
+  max-width: 50%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  margin-right: 30px;
+}
+
+.functionality__list {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.functionality__item {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 17px;
+}
