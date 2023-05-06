@@ -1,5 +1,15 @@
 .header {
   margin-bottom: 90px;
+  max-height: 80px;
+}
+
+.header__navbar {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  margin-right: 20px;
 }
 
 .header__link {
