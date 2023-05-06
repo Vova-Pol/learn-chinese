@@ -10,6 +10,10 @@ level3: #a1ef8b
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
 h1,
 h2,
 h3,
