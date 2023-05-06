@@ -5,9 +5,6 @@ function Header() {
   return (
     <header className="header">
       <nav className="header__navbar">
-        <Link className="header__link" to="/levels">
-          Levels
-        </Link>
         <Link className="header__link" to="/quiz">
           Quiz
         </Link>
