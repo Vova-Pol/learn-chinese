@@ -9,6 +9,9 @@ function Header() {
         <Link to="/">
           <Logo className="header__logo" />
         </Link>
+        <Link className="header__link" to="/">
+          Главная
+        </Link>
         <Link className="header__link" to="/quiz">
           Диктант
         </Link>
