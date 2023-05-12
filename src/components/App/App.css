@@ -37,7 +37,7 @@ a {
 
 .app {
   background-color: #ff6347;
-  padding: 50px 100px 100px 100px;
+  padding: 50px 100px 0 100px;
   color: #fdffff;
   min-height: 100vh;
 }
