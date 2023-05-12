@@ -1,14 +1,15 @@
 import '../../index.css';
 import './App.css';
-import Quiz from '../Quiz/Quiz';
+import Quiz from '../../pages/Quiz/Quiz';
 import { Routes, Route } from 'react-router-dom';
-import Search from '../Search/Search';
+import Search from '../../pages/Search/Search';
 import Header from '../Header/Header';
-import CreateFlashcard from '../CreateFlashcard/CreateFlashcard';
-import Flashcards from '../Flashcards/Flashcards';
+import CreateFlashcard from '../../pages/CreateFlashcard/CreateFlashcard';
+import Flashcards from '../../pages/Flashcards/Flashcards';
 import FlashcardsList from '../FlashcardsList/FlashcardsList';
-import Study from '../Study/Study';
-import Main from '../Main/Main';
+import Study from '../../pages/Study/Study';
+import Main from '../../pages/Main/Main';
+import Footer from '../Footer/Footer';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/search" element={<Search />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 }

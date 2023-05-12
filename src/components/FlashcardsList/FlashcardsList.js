@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 import { BKRS_SERACH_URL } from '../../utils/appConfig';
 import VideoOrigin from '../VideoOrigin/VideoOrigin';
 import EditFlashcardPopup from '../EditFlashcardPopup/EditFlashcardPopup';
-import CreateFlashcard from '../CreateFlashcard/CreateFlashcard';
+import CreateFlashcard from '../../pages/CreateFlashcard/CreateFlashcard';
 
 function FlashcardsList() {
   const [flashcardsList, setFlashcardsList] = useState([]);

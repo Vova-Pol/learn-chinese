@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './Flashcards.css';
 import { api } from '../../utils/Api';
-import EpisodesByOrigin from '../EpisodesByOrigin/EpisodesByOrigin';
+import EpisodesByOrigin from '../../components/EpisodesByOrigin/EpisodesByOrigin';
 import { ORIGINS_DATA } from '../../data/origins';
 
 function Flashcards() {
